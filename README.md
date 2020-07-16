@@ -2,6 +2,8 @@
 
  Debug LeetCode local in clion
 
+ 在leetcode上做题调试起来总有些不方便，所以查阅了一些资料后，按以下配置，自我感觉效率还行，分享给大家。祝大家刷题愉快。并附上自己整理的leetcode400题题表。
+
 参考：
 
 [LeetCode C++ 本地调试环境](https://github.com/Pokerpoke/LeetCode)
@@ -9,6 +11,9 @@
 源码：
 
 [Git Hub地址](https://github.com/zzh799/LeetCode_LocalDebug)
+
+Leetcode400题：
+[notion地址](https://www.notion.so/0cd424b64fea4618938dccd8d80a2d3f?v=faac0d4bb99a4091b491cf3bc6215be5)
 
 ## 依赖Clion插件
 

@@ -4,11 +4,11 @@
 
 参考：
 
-[LeetCode C++ 本地调试环境]([https://github.com/Pokerpoke/LeetCode](https://github.com/Pokerpoke/LeetCode))
+[LeetCode C++ 本地调试环境](https://github.com/Pokerpoke/LeetCode)
 
 源码：
 
-[Git Hub地址]([https://github.com/zzh799/LeetCode_LocalDebug](https://github.com/zzh799/LeetCode_LocalDebug))
+[Git Hub地址](https://github.com/zzh799/LeetCode_LocalDebug)
 
 ## 依赖Clion插件
 
@@ -31,8 +31,8 @@
 
 打开 `首选项(Preferences)=>Tools=>leetcode plugin` 自行设置登录名与密码
 
-- TempFilePath :设置到项目根目录
-- Cutstom Temlate :自定义模板，打开
+- TempFilePath :设置到项目根目录。
+- Cutstom Temlate :自定义模板，打开。
 - CodeFileName :Leetcode文件名称，建议设置为`$!{question.frontendQuestionId}-${question.titleSlug}`
 - CodeTemplate :重点，关系到生成的文件能否一步运行，引入了项目中的库文件，包括基本的c，c++库，与别人实现的Leetcode链表与树。
 
@@ -59,10 +59,10 @@ int main()
 
 ### 3.创建Leetcode文件，并使用`C/C+​+​ Single File Execution`创建启动项目
 
-- 打开题目列表，双击题目，生成Leetcode临时文件
+- 打开题目列表，双击题目，生成Leetcode临时文件。
 - 在文件空白处，右键选择 `Add executable for single c/cpp file`，会自动在根目录下的 `CMakeLists.txt`中创建可执行项目。
 
-- 运行或调试指定项目。
+- 修改 `main()`后，运行或调试指定项目。
 
 ![创建Leetcode文件](shotcuts/leetcode.png)
 
@@ -74,7 +74,7 @@ int main()
 
 #### CMakelist.txt
 
-该项目有两个CMakelists.txt文件，一个位于根目录下，一个位于include文件夹中
+该项目有两个CMakelists.txt文件，一个位于根目录下，一个位于include文件夹中。
 
 `根目录/CMakeLists.txt`:
 

@@ -114,3 +114,8 @@ add_library(leetcode ${LEETCODE})
 #### 2.执行`Add executable for single c/cpp file`后，项目中没有创建临时文件
 
 解决办法：LeetCode插件设置中将`TempFilePath`设为本项目的根目录
+
+#### 3.执行`Add executable for single c/cpp file`后，`Run/Debug`中没有新的选项
+
+解决办法:Clion打开根目录下的`CMakeLists.txt`，打开自动刷新` auto reload`。
+或者设置中找到cmake页，打开`Reload CMakeProject on editing CMakeLists.txt`

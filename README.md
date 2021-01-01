@@ -35,7 +35,9 @@ Leetcode400题：
 [LeetCode插件中文文档](https://github.com/shuzijun/leetcode-editor/blob/master/README_ZH.md)
 
 打开 `首选项(Preferences)=>Tools=>leetcode plugin` 自行设置登录名与密码
-
+- Code Type ：选择C++
+- LoginName : LeetCode用户名
+- Password : LeetCode密码
 - TempFilePath :设置到项目根目录。
 - Cutstom Temlate :自定义模板，打开。
 - CodeFileName :Leetcode文件名称，建议设置为`$!{question.frontendQuestionId}-${question.titleSlug}`
@@ -102,3 +104,13 @@ add_executable(1-two-sum leetcode/editor/cn/1-two-sum.cpp)
 aux_source_directory(. LEETCODE)
 add_library(leetcode ${LEETCODE})
 ```
+
+### 常见问题
+
+#### 1.创建的临时文件为java类型
+
+解决办法：LeetCode插件设置中`Code Type` 选择为C++
+
+#### 2.执行`Add executable for single c/cpp file`后，项目中没有创建临时文件
+
+解决办法：LeetCode插件设置中将`TempFilePath`设为本项目的根目录

@@ -1,7 +1,12 @@
+# DebugFolders
+/.idea
+/cmake-build-debug
+
 # Prerequisites
 *.d
 
 # Compiled Object files
+*.check_cache
 *.slo
 *.lo
 *.o
@@ -30,3 +35,4 @@
 *.exe
 *.out
 *.app
+

@@ -74,48 +74,33 @@ int main()
 
 ![创建Leetcode文件](shotcuts/leetcode.png)
 
-### 文件说明
+## 常见问题
 
-#### include文件夹
-
-包含了leetcode的链表与树。
-
-#### CMakelist.txt
-
-该项目有两个CMakelists.txt文件，一个位于根目录下，一个位于include文件夹中。
-
-`根目录/CMakeLists.txt`:
-
-```cmake
-cmake_minimum_required(VERSION 3.9)
-project(LeetCode)
-
-set(CMAKE_CXX_STANDARD 11)
-
-include_directories(${CMAKE_SOURCE_DIR}/include)
-add_subdirectory(leetcode/editor/cn/include)
-
-add_executable(1-two-sum leetcode/editor/cn/1-two-sum.cpp)
-```
-
-`根目录/leetcode/editor/cn/include/CMakeLists.txt`:
-
-```cmake
-aux_source_directory(. LEETCODE)
-add_library(leetcode ${LEETCODE})
-```
-
-### 常见问题
-
-#### 1.创建的临时文件为java类型
+### 1.创建的临时文件为java类型
 
 解决办法：LeetCode插件设置中`Code Type` 选择为C++
 
-#### 2.执行`Add executable for single c/cpp file`后，项目中没有创建临时文件
+### 2.执行`Add executable for single c/cpp file`后，项目中没有创建临时文件
 
 解决办法：LeetCode插件设置中将`TempFilePath`设为本项目的根目录
 
-#### 3.执行`Add executable for single c/cpp file`后，`Run/Debug`中没有新的选项
+### 3.执行`Add executable for single c/cpp file`后，`Run/Debug`中没有新的选项
 
 解决办法:Clion打开根目录下的`CMakeLists.txt`，打开自动刷新` auto reload`。
 或者设置中找到cmake页，打开`Reload CMakeProject on editing CMakeLists.txt`
+
+## 文件说明
+
+### leetcode\editor\include文件夹
+
+包含了leetcode的链表与树。
+
+### leetcode\editor\cn文件夹
+
+新打开的LeetCode题目会创建在这个目录下
+
+### CMakeLists.txt文件
+
+执行`Add executable for single c/cpp file`后，会往该文件添加可执行源码：
+
+`add_executable(1-two-sum leetcode/editor/cn/1-two-sum.cpp)`

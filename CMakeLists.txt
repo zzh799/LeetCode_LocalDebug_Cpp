@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 3.9)
 project(LeetCode_debug)
 set(CMAKE_CXX_STANDARD 11)
 
-add_subdirectory(leetcode/editor/cn/include)
+aux_source_directory(leetcode/editor/cn/include LEETCODE)
+add_library(leetcode ${LEETCODE})
 LINK_LIBRARIES(leetcode)
 
 add_executable(1-two-sum leetcode/editor/cn/1-two-sum.cpp)

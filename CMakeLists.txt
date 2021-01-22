@@ -1,8 +1,11 @@
 cmake_minimum_required(VERSION 3.9)
 project(LeetCode)
 set(CMAKE_CXX_STANDARD 11)
-aux_source_directory(leetcode/editor/cn/include library)
-add_library(LeetCode ${library})
+
+aux_source_directory(leetcode/editor/cn/include LEETCODE)
+add_library(leetcode ${LEETCODE})
+LINK_LIBRARIES(leetcode)
+
 add_executable(1-two-sum leetcode/editor/cn/1-two-sum.cpp)
 add_executable(2-add-two-numbers leetcode/editor/cn/2-add-two-numbers.cpp)
 add_executable(26-remove-duplicates-from-sorted-array leetcode/editor/cn/26-remove-duplicates-from-sorted-array.cpp)
@@ -18,3 +21,5 @@ add_executable(188-best-time-to-buy-and-sell-stock-iv leetcode/editor/cn/188-bes
 add_executable(187-repeated-dna-sequences leetcode/editor/cn/187-repeated-dna-sequences.cpp)
 add_executable(101-symmetric-tree leetcode/editor/cn/101-symmetric-tree.cpp)
 add_executable(226-invert-binary-tree leetcode/editor/cn/226-invert-binary-tree.cpp)
+
+add_executable(100-same-tree leetcode/editor/cn/100-same-tree.cpp)

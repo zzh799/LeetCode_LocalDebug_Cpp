@@ -16,3 +16,5 @@ add_executable(309-best-time-to-buy-and-sell-stock-with-cooldown leetcode/editor
 add_executable(714-best-time-to-buy-and-sell-stock-with-transaction-fee leetcode/editor/cn/714-best-time-to-buy-and-sell-stock-with-transaction-fee.cpp)
 add_executable(188-best-time-to-buy-and-sell-stock-iv leetcode/editor/cn/188-best-time-to-buy-and-sell-stock-iv.cpp)
 add_executable(187-repeated-dna-sequences leetcode/editor/cn/187-repeated-dna-sequences.cpp)
+add_executable(101-symmetric-tree leetcode/editor/cn/101-symmetric-tree.cpp)
+add_executable(226-invert-binary-tree leetcode/editor/cn/226-invert-binary-tree.cpp)

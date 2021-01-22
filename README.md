@@ -2,7 +2,7 @@
 
  Debug LeetCode local in clion
 
- 在leetcode上做题调试起来总有些不方便，所以查阅了一些资料后，按以下配置，自我感觉效率还行，分享给大家。祝大家刷题愉快。并附上自己整理的leetcode400题题表。
+ 在leetcode上做题调试起来总有些不方便，所以查阅了一些资料后，按以下配置，自我感觉效率还行，分享给大家。祝大家刷题愉快。
 
 参考：
 
@@ -11,9 +11,6 @@
 源码：
 
 [Git Hub地址](https://github.com/zzh799/LeetCode_LocalDebug)
-
-Leetcode400题：
-[notion地址](https://www.notion.so/0cd424b64fea4618938dccd8d80a2d3f?v=faac0d4bb99a4091b491cf3bc6215be5)
 
 ## 依赖Clion插件
 
@@ -56,8 +53,6 @@ int main()
 {
     Solution s;
     vector<int> data{7, 1, 5, 3, 6, 4};
-    //vector<int> ans = s.twoSum(data,11);
-    //cout << ans[0]<<ans[1]<<endl;
     auto res = "Hello LeetCode";
     cout<<res<<endl;
 }
@@ -101,6 +96,6 @@ int main()
 
 ### CMakeLists.txt文件
 
-执行`Add executable for single c/cpp file`后，会往该文件添加可执行源码：
+执行`Add executable for single c/cpp file`后，会往该文件添加可执行代码：
 
 `add_executable(1-two-sum leetcode/editor/cn/1-two-sum.cpp)`

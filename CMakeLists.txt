@@ -21,5 +21,3 @@ add_executable(188-best-time-to-buy-and-sell-stock-iv leetcode/editor/cn/188-bes
 add_executable(187-repeated-dna-sequences leetcode/editor/cn/187-repeated-dna-sequences.cpp)
 add_executable(101-symmetric-tree leetcode/editor/cn/101-symmetric-tree.cpp)
 add_executable(226-invert-binary-tree leetcode/editor/cn/226-invert-binary-tree.cpp)
-
-add_executable(100-same-tree leetcode/editor/cn/100-same-tree.cpp)

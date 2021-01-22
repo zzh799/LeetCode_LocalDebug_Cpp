@@ -1,6 +1,5 @@
 # DebugFolders
 /cmake-build-debug
-
 # Prerequisites
 *.d
 
@@ -35,3 +34,4 @@
 *.out
 *.app
 
+/.idea/

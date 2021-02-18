@@ -32,9 +32,38 @@ using namespace std;
 class Solution {
 public:
     int maximumProduct(vector<int>& nums) {
+        //一次遍历 o(N)
+        int n0=INT32_MIN;
+        int n1=INT32_MIN;
+        int n2=INT32_MIN;
 
+        int m0=INT32_MAX;
+        int m1=INT32_MAX;
+
+        for(int num : nums){
+            if(num<m0){
+                m1=m0;
+                m0=num;
+            }else if(num<m1){
+                m1=num;
+            }
+
+            if(num>n0){
+                n2=n1;
+                n1=n0;
+                n0=num;
+            }else if(num>n1){
+                n2=n1;
+                n1=num;
+            }else if(num>n2){
+                n2 = num;
+            }
+        }
+
+        return max(n0*n1*n2,n0*m1*m0);
     }
 };
+
 //leetcode submit region end(Prohibit modification and deletion)
 
 

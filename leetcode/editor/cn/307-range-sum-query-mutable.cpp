@@ -24,9 +24,9 @@
 //
 //解释：
 //NumArray numArray = new NumArray([1, 3, 5]);
-//numArray.sumRange(0, 2); // 返回 9 ，sum([1,3,5]) = 9
+//numArray.sumRange(0, 2); // 返回 9 ，query([1,3,5]) = 9
 //numArray.update(1, 2);   // nums = [1,2,5]
-//numArray.sumRange(0, 2); // 返回 8 ，sum([1,2,5]) = 9
+//numArray.sumRange(0, 2); // 返回 8 ，query([1,2,5]) = 9
 // 
 //
 // 
@@ -53,17 +53,41 @@ using namespace std;
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class NumArray {
+    vector<int> sums;
+    vector<int> data;
+
 public:
-    NumArray(vector<int>& nums) {
-
+    NumArray(vector<int> &nums) {
+        data = nums;
+        sums = vector<int>(data.size() + 1, 0);
+        for (int i = 0; i < data.size(); i++) {
+            add(i + 1, data[i]);
+        }
     }
-    
-    void update(int index, int val) {
 
+    void add(int i, int val) {
+        while (i <= data.size()) {
+            sums[i] += val;
+            i += i & -i;
+        }
     }
-    
-    int sumRange(int left, int right) {
 
+    int query(int i) {
+        int ans = 0;
+        while (i > 0) {
+            ans += sums[i];
+            i -= i & -i;
+        }
+        return ans;
+    }
+
+    void update(int i, int val) {
+        data[i] = val;
+        add(i + 1, val - data[i]);
+    }
+
+    int sumRange(int i, int j) {
+        return query(j + 1) - query(i);
     }
 };
 
@@ -76,11 +100,10 @@ public:
 //leetcode submit region end(Prohibit modification and deletion)
 
 
-int main()
-{
+int main() {
     Solution s;
     vector<int> data{7, 1, 5, 3, 6, 4};
     //vector<int> ans = s.twoSum(data,11);
     //cout << ans[0]<<ans[1]<<endl;
-    cout<<"Hello LeetCode"<<endl;
+    cout << "Hello LeetCode" << endl;
 }

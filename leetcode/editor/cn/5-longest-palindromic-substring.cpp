@@ -23,18 +23,32 @@ using namespace std;
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
 public:
-    string longestPalindrome(string s) {
+    string palindrome(string &s, int l, int r) {
+        while (l >= 0 && r < s.size() && s[l] == s[r]) {
+            l--;
+            r++;
+        }
+        return s.substr(l + 1, r - l - 1);
+    }
 
+    string longestPalindrome(string s) {
+        string res;
+        for (int i = 0; i < s.size(); ++i) {
+            string s1 = palindrome(s, i, i);
+            string s2 = palindrome(s, i, i + 1);
+            res = res.size() > s1.size() ? res : s1;
+            res = res.size() > s2.size() ? res : s2;
+        }
+        return res;
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
 
 
-int main()
-{
+int main() {
     Solution s;
     vector<int> data{7, 1, 5, 3, 6, 4};
-    //vector<int> ans = s.twoSum(data,11);
-    //cout << ans[0]<<ans[1]<<endl;
-    cout<<"Hello LeetCode"<<endl;
+
+
+    cout << "Hello LeetCode" << endl;
 }

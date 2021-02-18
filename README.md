@@ -103,4 +103,4 @@ int main()
 
 执行`Add executable for single c/cpp file`后，会往该文件添加可执行源码：
 
-`add_executable(1-two-sum leetcode/editor/cn/1-two-sum.cpp)`
+`add_executable(1-two-sum leetcode/editor/cn/1-two-query.cpp)`

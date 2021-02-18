@@ -23,18 +23,39 @@ using namespace std;
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
 public:
-    vector<string> letterCombinations(string digits) {
+    string tmp;
+    vector<string> res;
+    vector<string> board = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
+    void DFS(int pos, string digits) {
+        if (pos == digits.size()) {
+            res.push_back(tmp);
+            cout<<tmp<<endl;
+            return;
+        }
+        int num = digits[pos] - '0';
+        for (int i = 0; i < board[num].size(); i++) {
+            tmp.push_back(board[num][i]);
+            DFS(pos + 1, digits);
+            tmp.pop_back();
+        }
     }
+
+    vector<string> letterCombinations(string digits) {
+        if (digits.size() == 0) return res;
+        DFS(0, digits);
+        return res;
+    }
+
+
 };
 //leetcode submit region end(Prohibit modification and deletion)
 
 
-int main()
-{
+int main() {
     Solution s;
-    vector<int> data{7, 1, 5, 3, 6, 4};
-    //vector<int> ans = s.twoSum(data,11);
-    //cout << ans[0]<<ans[1]<<endl;
-    cout<<"Hello LeetCode"<<endl;
+    vector<string> a = s.letterCombinations("222");
+//    for (string s :a) {
+//        cout << s << endl;
+//    }
 }

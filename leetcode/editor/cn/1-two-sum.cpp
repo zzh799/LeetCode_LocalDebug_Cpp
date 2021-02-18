@@ -36,16 +36,21 @@ public:
 
         return result;
     }
+
+
+
 };
 //leetcode submit region end(Prohibit modification and deletion)
 
 
 int main()
 {
+    set<int> a;
+    a.insert(1);
     Solution s;
     vector<int> data{7, 1, 5, 3, 6, 4};
     //vector<int> ans = s.twoSum(data,11);
     //cout << ans[0]<<ans[1]<<endl;
     auto res = s.twoSum(data,12);
-    cout<<res[0]<<endl<<res[1]<<endl;
+    cout<<res[0]<<" "<<res[1]<<endl;
 }

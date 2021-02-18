@@ -54,18 +54,31 @@ using namespace std;
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-
+        int length = s.size();
+        if (length == 0) return 0;
+        if (length == 1) return 1;
+        int l = 0;
+        int res = 0;
+        for (int r = 1; r < length; r++) {
+            for (int k = l; k < r; k++)
+                if (s[k] == s[r]) {
+                    l = k + 1;
+                    res = max(res, r - l);
+                    break;
+                }
+            res = max(res, r - l + 1);
+        }
+        return res;
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
 
 
-int main()
-{
+int main() {
     Solution s;
     vector<int> data{7, 1, 5, 3, 6, 4};
     //vector<int> ans = s.twoSum(data,11);
     //cout << ans[0]<<ans[1]<<endl;
     auto res = "Hello LeetCode";
-    cout<<res<<endl;
+    cout << res << endl;
 }

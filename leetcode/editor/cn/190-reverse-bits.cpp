@@ -43,17 +43,23 @@ using namespace std;
 class Solution {
 public:
     uint32_t reverseBits(uint32_t n) {
-        
+        uint32_t ret = 0;
+        for(int i = 1; i <= 32; i++){ //32位
+            //如果此位是1的话，颠倒这个位在32位数中的位置
+            if(n & 1) ret += (1 << (32 - i));
+            //向右移一位，遍历32遍即可判断所有位
+            n >>= 1;
+        }
+        return ret;
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
 
 
-int main()
-{
+int main() {
     Solution s;
     vector<int> data{7, 1, 5, 3, 6, 4};
     //vector<int> ans = s.twoSum(data,11);
     //cout << ans[0]<<ans[1]<<endl;
-    cout<<"Hello LeetCode"<<endl;
+    cout << "Hello LeetCode" << endl;
 }
